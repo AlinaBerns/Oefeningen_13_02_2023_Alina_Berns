@@ -1,7 +1,8 @@
 package be.intecbrussel;
-import java.util.Scanner;
 import java.util.Arrays;
+import java.util.Scanner;
 import java.util.stream.IntStream;
+
 
 public class MyArrays {
     public static void main(String[] args) {
@@ -39,7 +40,8 @@ public class MyArrays {
         1 - 5
          */
 
-
+        //OPDRACHT 1
+        System.out.println("*** OPDRACHT 1 ***");
         Scanner in = new Scanner(System.in);
 
         System.out.println("Please enter 10 numbers...");
@@ -58,14 +60,55 @@ public class MyArrays {
         user[9] = in.nextInt();
 
         for (int index = 0; index <= user.length - 1; index++) {
-            System.out.println(user[index]);
+
+        }
+        System.out.println(Arrays.toString(user));
+
+        //OPDRACHT 2
+        System.out.println("*** OPDRACHT 2 ***");
+
+        int[] user1 = user.clone();
+
+        for (int index1 = user1.length - 1; index1 >= 0; index1--) {
+            System.out.println(user1[index1]);
         }
 
-        for (int index1 = user.length - 1; index1 >= 0; index1--) {
-            System.out.println(user[index1]);
-        }
+
+        //OPDRACHT 3
+        System.out.println("*** OPDRACHT 3 ***");
         boolean contains = IntStream.of(user).anyMatch(x -> x == 4);
-    }
 
+        System.out.println(contains);
+
+        //OPDRACHT 4
+        System.out.println("*** OPDRACHT 4 ***");
+
+        int Evens = 0;
+        int Odd = 0;
+
+        for(int i = 0;i<user.length;i++){
+            if(user[i]%2 == 0){
+                Evens++;
+            }else{
+                Odd++;
+            }
+        }
+        System.out.println("The number of odd numbers: " + Odd);
+        System.out.println("The number of even numbers: " + Evens);
+
+        //OPDRACHT 5
+        System.out.println("*** OPDRACHT 5 ***");
+        String [] strArray = {"Convert", "array", "to", "String"};
+        System.out.println(Arrays.toString(strArray));
+
+        // OF
+
+        String myString = String.join(" ", strArray);
+        System.out.println(myString);
+
+        // OF
+
+        System.out.println(strArray[0]+" "+strArray[1]+" "+strArray[2]+" "+strArray[3]);
+    }
 }
 
